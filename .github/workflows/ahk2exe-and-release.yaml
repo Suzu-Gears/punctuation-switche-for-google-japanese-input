@@ -1,4 +1,4 @@
-name: Ahk2Exe and Release for PunctuationSwitcher4MS-IME
+name: Ahk2Exe and Release for PunctuationSwitcher4GJI
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - name: Ahk2Exe
         uses: nekocodeX/GitHub-Action-Ahk2Exe@main
         with:
-          in: PunctuationSwitcher4MS-IME.ahk
+          in: PunctuationSwitcher4GJI.ahk
           out: PunctuationSwitcher.exe
           icon: icons/app.ico
 
@@ -34,7 +34,7 @@ jobs:
           cp icons/KUTEN_TOUTEN.ico release/icons/
           cp Readme.txt release/
           cd release
-          powershell Compress-Archive -Path * -DestinationPath ../PunctuationSwitcher4MS-IME-${{steps.tag-info.outputs.tag-name}}.zip
+          powershell Compress-Archive -Path * -DestinationPath ../PunctuationSwitcher4GJI-${{steps.tag-info.outputs.tag-name}}.zip
           cd ..
 
       - name: Release
@@ -43,7 +43,7 @@ jobs:
           tag_name: ${{steps.tag-info.outputs.tag-name}}
           name: Release ${{steps.tag-info.outputs.tag-name}}
           body: 'Auto-generated release'
-          files: PunctuationSwitcher4MS-IME-${{steps.tag-info.outputs.tag-name}}.zip
+          files: PunctuationSwitcher4GJI-${{steps.tag-info.outputs.tag-name}}.zip
           draft: false
           prerelease: false
           fail_on_unmatched_files: true
