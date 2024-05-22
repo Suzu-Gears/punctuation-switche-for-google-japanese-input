@@ -24,11 +24,11 @@ global ConfigText
 global isRunning := false ; 切替処理の実行中を示すフラグ
 
 if (!FileExist(ProtocPath)) {
-    MsgBox, 16, エラー, protoc\bin\protoc.exeが見つかりません。`nSetup.exeを実行してください。
+    MsgBox, 16, エラー, protoc\bin\protoc.exeが見つかりません。`nSetup.batを実行してください。
     ExitApp
 }
 if (!FileExist(ConfigProtoPath)) {
-    MsgBox, 16, エラー, protoc\bin\config.protoが見つかりません。`nSetup.exeを実行してください。
+    MsgBox, 16, エラー, protoc\bin\config.protoが見つかりません。`nSetup.batを実行してください。
     ExitApp
 }
 
