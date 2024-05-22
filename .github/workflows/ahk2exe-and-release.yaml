@@ -29,6 +29,7 @@ jobs:
         run: |
           mkdir release
           cp PunctuationSwitcher.exe release/
+          cp Setup.bat release/
           mkdir release/icons
           cp icons/COMMA_PERIOD.ico release/icons/
           cp icons/KUTEN_TOUTEN.ico release/icons/
