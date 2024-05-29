@@ -3,7 +3,7 @@ name: Ahk2Exe and Release for PunctuationSwitcher4GJI
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   Ahk2Exe-and-Release:
@@ -43,7 +43,7 @@ jobs:
         with:
           tag_name: ${{steps.tag-info.outputs.tag-name}}
           name: Release ${{steps.tag-info.outputs.tag-name}}
-          body: 'Auto-generated release'
+          body: "Auto-generated release"
           files: PunctuationSwitcher4GJI-${{steps.tag-info.outputs.tag-name}}.zip
           draft: false
           prerelease: false
